@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="1.312">
+<testcase classname="verify the OMRBranchAdactinAutomation Loginpage to Search hotel page details" name="Verifying Adactin Login page by selecting all fields" time="0.095">
+<system-out><![CDATA[Given User is on Adactin Page...............................................passed
+When User should Login "najimunisab","Naji@123".............................passed
+Then User should verify after Login success message "Hello Najimunisab!"....passed
+When User should Search hotel "Melbourne","Hotel Sunshine","Standard","3 - Three","12/08/2022","13/08/2022","2 - Two" and "2 - Two".passed
+Then User should verify after search "Select Hotel".........................passed
+]]></system-out>
+</testcase>
+<testcase classname="verify the OMRBranchAdactinAutomation Loginpage to Search hotel page details" name="Verifying Adactin Login page by entering only mandatory fields" time="0.032">
+<system-out><![CDATA[Given User is on Adactin Page...............................................passed
+When User should Login "najimunisab","Naji@123".............................passed
+Then User should verify after Login success message "Hello Najimunisab!"....passed
+When User should Search hotel only mandatory fields "Melbourne","3 - Three","12/08/2022","13/08/2022" and "2 - Two".passed
+Then User should verify after search "Select Hotel".........................passed
+]]></system-out>
+</testcase>
+<testcase classname="verify the OMRBranchAdactinAutomation Loginpage to Search hotel page details" name="Verifying Adactin Login page by selecting invalide date" time="0.011">
+<system-out><![CDATA[Given User is on Adactin Page...............................................passed
+When User should Login "najimunisab","Naji@123".............................passed
+Then User should verify after Login success message "Hello Najimunisab!"....passed
+When User should Search hotel by selecting invalid date "Melbourne","Hotel Sunshine","Standard","3 - Three","13/08/2023","10/08/2022","2 - Two" and "2 - Two".passed
+Then User should verify after search exact two error message in Date Checking "Check-In Date shall be before than Check-Out Date","Check-Out Date shall be after than Check-In Date".passed
+]]></system-out>
+</testcase>
+<testcase classname="verify the OMRBranchAdactinAutomation Loginpage to Search hotel page details" name="Verifying Adactin Login page by without entering any fields" time="0.028">
+<system-out><![CDATA[Given User is on Adactin Page...............................................passed
+When User should Login "najimunisab","Naji@123".............................passed
+Then User should verify after Login success message "Hello Najimunisab!"....passed
+When User should Search hotel without selecting any fields..................passed
+Then User should verify after search exact error message "Please Select a Location".passed
+]]></system-out>
+</testcase>
+</testsuite>
